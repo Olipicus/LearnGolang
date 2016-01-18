@@ -32,7 +32,17 @@ func main() {
 
 	sliceD := []int{}
 	fmt.Println(sliceD == nil)
-
+	fmt.Printf("%p\n", sliceC)
 	//	sliceC := sliceB
+	b(&sliceC, &sliceC)
+	fmt.Println(sliceC)
 
+}
+
+func b(a *[]int, b *[]int) {
+	fmt.Printf("%p - %p\n", *a, *b)
+	*a = append(*a, 1)
+	*b = append(*b, 9)
+	fmt.Printf("%p - %p\n", a, b)
+	fmt.Printf("%v - %v\n", a, b)
 }
