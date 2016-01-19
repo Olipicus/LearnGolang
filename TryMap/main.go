@@ -32,4 +32,10 @@ func main() {
 	delete(myMap, "fr") // Delete Value By Key
 	fmt.Printf("%T\t%v\t%p\n", myMap, myMap, myMap)
 
+	if val, exist := myMap["fr"]; exist {
+		fmt.Println(val, exist)
+	} else {
+		fmt.Println("Not Found", val, exist)
+	}
+
 }
