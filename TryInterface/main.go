@@ -41,6 +41,7 @@ func main() {
 
 	printArea(c)
 	printArea(s)
+
 	//fmt.Println(c.area())
 	//fmt.Println(s.area())
 
