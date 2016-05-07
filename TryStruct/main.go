@@ -11,6 +11,10 @@ func (p person) speakName() {
 	fmt.Println(p.name)
 }
 
+func (p person) speakLastname() {
+	fmt.Println(p.lastname)
+}
+
 type father struct {
 	person   // like inheritance
 	children map[int]person
@@ -43,4 +47,5 @@ func main() {
 	myPerson.speakName()
 	fmt.Println(fatherJohn)
 	fatherJohn.speakName()
+	fatherJohn.speakLastname()
 }
